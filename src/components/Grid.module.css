@@ -1,0 +1,59 @@
+/**
+ * Grid Styles
+ *
+ * Main game board with glass-morphism container.
+ */
+
+.grid {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 0 60px rgba(255, 255, 255, 0.02);
+  touch-action: none;
+  user-select: none;
+}
+
+.gridDisabled {
+  pointer-events: none;
+}
+
+.cells {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: inherit;
+}
+
+.cell {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tiles {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+}
+
+/* Responsive scaling */
+@media (max-width: 480px) {
+  .grid {
+    width: calc(100vw - 32px) !important;
+    height: calc(100vw - 32px) !important;
+    max-width: 360px;
+    max-height: 360px;
+    padding: 8px !important;
+  }
+
+  .cell {
+    width: auto !important;
+    height: auto !important;
+  }
+}

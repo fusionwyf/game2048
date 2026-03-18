@@ -1,0 +1,93 @@
+/**
+ * App Styles
+ *
+ * Main layout and atmospheric design.
+ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background 0.5s ease;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -2px;
+  text-shadow:
+    0 0 40px rgba(196, 78, 255, 0.5),
+    0 0 80px rgba(0, 212, 255, 0.3);
+  background: linear-gradient(135deg, #ff6b9d, #c44eff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 8px 0 0;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.grid-wrapper {
+  position: relative;
+  margin-top: 8px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.hint {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+}
+
+.hint kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  margin: 0 2px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .game-container {
+    gap: 16px;
+    padding: 16px;
+  }
+}

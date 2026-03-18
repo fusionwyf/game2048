@@ -1,0 +1,59 @@
+/**
+ * ScoreBoard Styles
+ */
+
+.container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.scoreBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 100px;
+  transition: transform 0.15s ease;
+}
+
+.scorePop {
+  animation: scorePop 0.2s ease;
+}
+
+@keyframes scorePop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 480px) {
+  .scoreBox {
+    padding: 8px 16px;
+    min-width: 80px;
+  }
+
+  .value {
+    font-size: 20px;
+  }
+}
